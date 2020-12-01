@@ -1,0 +1,53 @@
+﻿@model MVC_LOGIN_CRUD.Models.Producto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<font color="red">
+    <h2>Detalles</h2>
+</font>
+
+
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rubro.rubro1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rubro.rubro1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_producto }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>
